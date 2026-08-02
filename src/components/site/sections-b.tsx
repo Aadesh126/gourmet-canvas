@@ -8,7 +8,7 @@ type MenuKey = keyof typeof menu;
 
 export function MenuShowcase() {
   const keys = Object.keys(menu) as MenuKey[];
-  const [active, setActive] = useState<MenuKey>(keys[0]);
+  const [active, setActive] = useState<MenuKey>("Tasting");
 
   return (
     <section id="menu" className="bg-surface px-6 py-32">
