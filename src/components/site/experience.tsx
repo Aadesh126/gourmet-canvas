@@ -96,7 +96,7 @@ export function CursorGlow() {
 export function LoadingCurtain() {
   const [done, setDone] = useState(false);
   useEffect(() => {
-    const t = setTimeout(() => setDone(true), 1500);
+    const t = setTimeout(() => setDone(true), 900);
     return () => clearTimeout(t);
   }, []);
 

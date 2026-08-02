@@ -67,7 +67,7 @@ export function Hero() {
   const imgY = useTransform(scrollYProgress, [0, 1], [0, -90]);
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 1600);
+    const t = setTimeout(() => setMounted(true), 1000);
     return () => clearTimeout(t);
   }, []);
 
@@ -93,7 +93,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.35, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="eyebrow flex items-center gap-3"
           >
             <Star className="h-3 w-3 fill-gold text-gold" aria-hidden />
@@ -108,7 +108,7 @@ export function Hero() {
                   initial={{ y: "110%" }}
                   animate={{ y: "0%" }}
                   transition={{
-                    delay: 1.65 + i * 0.13,
+                    delay: 0.4 + i * 0.13,
                     duration: 1.25,
                     ease: [0.16, 1, 0.3, 1],
                   }}
@@ -122,7 +122,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ delay: 2.15, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.85, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground"
           >
             Seventeen courses composed each morning from the market, the coast and the seasons —
@@ -132,7 +132,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.35, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 1.0, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <LuxeButton href="#reserve">Reserve a table</LuxeButton>
@@ -146,7 +146,7 @@ export function Hero() {
           <motion.div
             initial={{ clipPath: "inset(100% 0% 0% 0% round 32px)", scale: 1.08 }}
             animate={{ clipPath: "inset(0% 0% 0% 0% round 32px)", scale: 1 }}
-            transition={{ delay: 1.7, duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.45, duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative aspect-[4/5] overflow-hidden rounded-[32px] shadow-luxe"
           >
             <img
@@ -171,7 +171,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 1.15, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="glass float-slow absolute -bottom-8 -left-6 rounded-2xl px-6 py-5 shadow-float sm:-left-10"
           >
             <p className="font-display text-3xl text-foreground">17</p>
@@ -186,7 +186,7 @@ export function Hero() {
         href="#dishes"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.8, duration: 1 }}
+        transition={{ delay: 1.3, duration: 1 }}
         style={{ opacity: fade }}
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-muted-foreground transition-colors hover:text-gold sm:flex"
         aria-label="Scroll to signature dishes"
