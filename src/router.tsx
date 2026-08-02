@@ -1,16 +1,52 @@
-import { QueryClient } from "@tanstack/react-query";
-import { createRouter } from "@tanstack/react-router";
-import { routeTree } from "./routeTree.gen";
+meta: [
+  { charSet: "utf-8" },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
 
-export const getRouter = () => {
-  const queryClient = new QueryClient();
+  { title: "Classic Restaurant" },
 
-  const router = createRouter({
-    routeTree,
-    context: { queryClient },
-    scrollRestoration: true,
-    defaultPreloadStaleTime: 0,
-  });
+  {
+    name: "description",
+    content:
+      "Experience luxury fine dining at Classic Restaurant with signature dishes, elegant ambiance, and unforgettable culinary moments.",
+  },
 
-  return router;
-};
+  { property: "og:site_name", content: "Classic Restaurant" },
+  { property: "og:type", content: "website" },
+  { property: "og:title", content: "Classic Restaurant" },
+
+  {
+    property: "og:description",
+    content:
+      "Experience luxury fine dining at Classic Restaurant with signature dishes, elegant ambiance, and unforgettable culinary moments.",
+  },
+
+  {
+    property: "og:image",
+    content: "https://classic-restaurant-ochre.vercel.app/preview.png",
+  },
+
+  {
+    property: "og:url",
+    content: "https://classic-restaurant-ochre.vercel.app",
+  },
+
+  { name: "twitter:card", content: "summary_large_image" },
+
+  {
+    name: "twitter:title",
+    content: "Classic Restaurant",
+  },
+
+  {
+    name: "twitter:description",
+    content:
+      "Experience luxury fine dining at Classic Restaurant with signature dishes, elegant ambiance, and unforgettable culinary moments.",
+  },
+
+  {
+    name: "twitter:image",
+    content: "https://classic-restaurant-ochre.vercel.app/preview.png",
+  },
+
+  { name: "theme-color", content: "#fbf8f3" },
+],
